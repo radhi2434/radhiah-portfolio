@@ -15,8 +15,48 @@ header {
   padding: 2rem 1rem;
 }
 
-section {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #4CAF50;
+  display: inline-block;
+}
+
+#about {
   padding: 2rem;
+  background-color: #fff;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-photo {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+}
+
+.about-photo img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+section {
+  padding: 3rem 1.5rem;
   max-width: 800px;
   margin: auto;
 }
@@ -59,6 +99,82 @@ section {
   line-height: 1.6;
 }
 
+#skills {
+  padding: 2rem;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.skills-box span {
+  background-color: #004902;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.skills-box span:hover {
+  background-color: #0d6711;
+}
+
+
+#contact-form {
+  background: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #45a049;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
 
 footer {
   background: #333;
@@ -68,16 +184,27 @@ footer {
   margin-top: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
     padding: 1rem;
   }
 
   header, section {
     padding: 1rem;
+    text-align: center;
   }
 
   .project-card {
-    font-size: 14px;
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  #contact-form form {
+    text-align: left;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
   }
 }
+
