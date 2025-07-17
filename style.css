@@ -61,6 +61,50 @@ section {
   margin: auto;
 }
 
+#timeline {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding-left: 20px;
+  border-left: 3px solid #4CAF50;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 5px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .project-card {
   background: #fff;
   padding: 1rem;
@@ -160,21 +204,6 @@ section {
   background-color: #45a049;
 }
 
-button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #388e3c;
-}
-
 
 footer {
   background: #333;
@@ -205,52 +234,5 @@ footer {
 
   h1, h2 {
     font-size: 1.5rem;
-  }
-}
-
-@media print {
-  /* Hide parts not needed in print */
-  header,
-  footer,
-  #projects,
-  #contact-form {
-    display: none;
-  }
-
-  body {
-    font-size: 12pt;
-    background: white;
-    color: black;
-    padding: 0;
-    margin: 0;
-  }
-
-  #about,
-  #achievements,
-  #skills {
-    page-break-inside: avoid;
-  }
-
-  .about-photo,
-  img,
-  a {
-    display: none !important;
-  }
-
-  #skills .skill-card,
-  #skills .skills-box span {
-    border: 1px solid #333;
-    background: none;
-    color: black;
-    box-shadow: none;
-  }
-
-  h1, h2, h3 {
-    color: black;
-  }
-
-  * {
-    box-shadow: none !important;
-    text-shadow: none !important;
   }
 }
